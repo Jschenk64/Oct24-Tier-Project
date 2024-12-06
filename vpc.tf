@@ -69,7 +69,7 @@ resource "aws_nat_gateway" "win24_nat" {
 }
 
 resource "aws_eip" "win24_nat_eip" {
-  
+
 }
 
 resource "aws_route_table" "win24_private_rt" {
@@ -90,3 +90,8 @@ resource "aws_route_table_association" "win24_private_rta" {
   subnet_id      = element(aws_subnet.win24_priv_sub[*].id, count.index)
   route_table_id = aws_route_table.win24_private_rt.id
 }
+
+
+
+
+

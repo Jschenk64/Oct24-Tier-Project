@@ -28,3 +28,13 @@ output "alb_dns_name" {
   description = "DNS name of the load balancer"
   value       = aws_lb.win24_alb.dns_name
 }
+
+
+output "security_group_id" {
+  description = "ID of the allow_http_ssh security group"
+  value       = aws_security_group.allow_http_ssh.id
+}
+
+
+
+
